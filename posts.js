@@ -5,15 +5,12 @@ const posts = [
         author: "Admin",
         image: "https://images.ctfassets.net/ti0n6mm28of1/7KqoTeaFffok7Mu4a81JaN/3208690d894675bdb0d71caa0dddc8a2/EMBARGO_CORO_MICK_LOU.jpg",
         content: `
-            ### New Nightmare Neighbours Shake Up Coronation Street
-            
-            Weatherfield residents are in for a wild ride this February as 'nightmare neighbours' **Mick and Lou Michaelis** crash onto the scene, causing chaos from day one. Moving into Mawdsley Street, they’re set to ignite drama like never before by bringing trouble right to **Chesney** and **Gemma’s** doorstep.
-            
-            The sparks begin on **12th February** with Lou (played by **Farrel Hegarty**) befriending Gemma. But the real shocker comes on **14th February** when Mick (played by **Joe Layton**) is revealed as the mystery man who’s been harassing Chesney for months.
-            
-            Together, Mick and Lou’s arrival threatens to unravel hidden secrets and stir up long-standing tensions, ensuring life on the cobbles will never be the same again.
+            <h2>New Nightmare Neighbours Shake Up Coronation Street</h2>
+            <p>Weatherfield residents are in for a wild ride this February as 'nightmare neighbours' <strong>Mick and Lou Michaelis</strong> crash onto the scene, causing chaos from day one. Moving into Mawdsley Street, they’re set to ignite drama like never before by bringing trouble right to <strong>Chesney</strong> and <strong>Gemma’s</strong> doorstep.</p>
+            <p>The sparks begin on <strong>12th February</strong> with Lou (played by <strong>Farrel Hegarty</strong>) befriending Gemma. But the real shocker comes on <strong>14th February</strong> when Mick (played by <strong>Joe Layton</strong>) is revealed as the mystery man who’s been harassing Chesney for months.</p>
+            <p>Together, Mick and Lou’s arrival threatens to unravel hidden secrets and stir up long-standing tensions, ensuring life on the cobbles will never be the same again.</p>
         `,
-        publishDate: "2025-02-07T22:25:00+13:00"
+        publishDate: "2025-02-07T22:28:00+13:00"
     },
     {
         id: 3,

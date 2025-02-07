@@ -1,52 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const postContent = document.getElementById("post-content");
     const params = new URLSearchParams(window.location.search);
     const postId = parseInt(params.get("id"));
-
-    function formatDateTime(dateString) {
-        const date = new Date(dateString);
-        const formattedDate = date.toLocaleDateString("en-NZ", {
-            month: "long",
-            day: "numeric",
-            year: "numeric"
-        });
-        const formattedTime = date.toLocaleTimeString("en-NZ", {
-            hour: "2-digit",
-            minute: "2-digit",
-            hour12: true
-        });
-        return `${formattedDate} at ${formattedTime}`;
-    }
-
-    // Find the post by ID
     const post = posts.find(p => p.id === postId);
 
     if (post) {
-        // Display the post content with date and time
-        postContent.innerHTML = `
-            <h1>${post.title}</h1>
-            <p><small>Published on ${formatDateTime(post.publishDate)} by ${post.author}</small></p>
-            <img src="${post.image}" class="img-fluid mb-4" alt="${post.title}">
-            <div>${post.content}</div>
-        `;
+        // Display post content
+        document.getElementById("post-content").innerHTML = post.content;
 
-        // Dynamically update meta tags for social previews
-        document.title = post.title;
-        document.getElementById("post-title").innerText = post.title;
-        document.getElementById("post-description").content = post.content.substring(0, 150);
+        // Insert social preview meta tags
+        if (post.socialPreview) {
+            document.title = post.socialPreview.ogTitle;
 
-        // Update Open Graph meta tags
-        document.querySelector('meta[property="og:title"]').content = post.title;
-        document.querySelector('meta[property="og:description"]').content = post.content.substring(0, 150);
-        document.querySelector('meta[property="og:image"]').content = post.image;
-        document.querySelector('meta[property="og:url"]').content = window.location.href;
+            // Open Graph Tags
+            addMetaTag("og:title", post.socialPreview.ogTitle);
+            addMetaTag("og:description", post.socialPreview.ogDescription);
+            addMetaTag("og:image", post.socialPreview.ogImage);
+            addMetaTag("og:url", window.location.href);
 
-        // Update Twitter meta tags
-        document.querySelector('meta[name="twitter:title"]').content = post.title;
-        document.querySelector('meta[name="twitter:description"]').content = post.content.substring(0, 150);
-        document.querySelector('meta[name="twitter:image"]').content = post.image;
+            // Twitter Tags
+            addMetaTag("twitter:title", post.socialPreview.twitterTitle);
+            addMetaTag("twitter:description", post.socialPreview.twitterDescription);
+            addMetaTag("twitter:image", post.socialPreview.twitterImage);
+        }
     } else {
-        postContent.innerHTML = "<p>Post not found!</p>";
-        document.title = "Post Not Found";
+        document.getElementById("post-content").innerHTML = "<p>Post not found!</p>";
+    }
+
+    // Helper function to create and append meta tags
+    function addMetaTag(property, content) {
+        const meta = document.createElement("meta");
+        if (property.startsWith("og:")) {
+            meta.setAttribute("property", property);
+        } else {
+            meta.setAttribute("name", property);
+        }
+        meta.setAttribute("content", content);
+        document.head.appendChild(meta);
     }
 });

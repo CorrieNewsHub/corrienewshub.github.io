@@ -53,6 +53,14 @@ const posts = [
             <h4>What do you love about Coronation Street?</h4>
             <p>"I&rsquo;ve been blown away by how warm and welcoming everyone is. The cast and crew are like a proper family. It&rsquo;s been an enjoyable experience."</p>
         `,
-        publishDate: "2025-02-07T22:57:00+13:00"
+        publishDate: "2025-02-07T22:57:00+13:00",
+        socialPreview: {
+            ogTitle: "Nightmare Neighbours Shake Up Coronation Street",
+            ogDescription: "Mick and Lou Michaelis arrive on Coronation Street, bringing chaos and drama to Weatherfield.",
+            ogImage: "https://images.ctfassets.net/ti0n6mm28of1/7KqoTeaFffok7Mu4a81JaN/3208690d894675bdb0d71caa0dddc8a2/EMBARGO_CORO_MICK_LOU.jpg",
+            twitterTitle: "Nightmare Neighbours Shake Up Coronation Street",
+            twitterDescription: "The arrival of nightmare neighbours Mick and Lou Michaelis shakes up Coronation Street.",
+            twitterImage: "https://images.ctfassets.net/ti0n6mm28of1/7KqoTeaFffok7Mu4a81JaN/3208690d894675bdb0d71caa0dddc8a2/EMBARGO_CORO_MICK_LOU.jpg"
+        }
     }
 ];

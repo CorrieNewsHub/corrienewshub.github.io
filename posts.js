@@ -26,5 +26,23 @@ const posts = [
             <p>"Chaotic and loud, Mick and Lou bulldoze their way into Weatherfield, causing absolute carnage for the residents of Coronation Street. Their relationship is volatile to say the least, but at the heart of it lies a fierce sense of family loyalty."</p>
         `,
         publishDate: "2025-02-07T22:57:00+13:00"
+     },
+    {
+        id: 2,
+        title: "Coronation Street | Full Episode | Tuesday, 4th February 2025",
+        author: "Admin",
+        image: "https://img.youtube.com/vi/hM9AM01qcoU/maxresdefault.jpg",
+        content: `
+            <h3>Coronation Street | Full Episode | Tuesday, 4th February 2025</h3>
+            <p>Tensions run high in tonight’s dramatic episode of Coronation Street! 💥</p>
+            <p>As Max's lifeless body is carried out of the house and into an ambulance, a devastated David blames himself, regretting ever stealing Harvey’s money. Meanwhile, at the hospital, Nick accuses Leanne of starting the fire—she denies it, but shocking evidence emerges when she finds matches in her coat pocket. 🔥</p>
+            <p>Elsewhere, Kevin is left deeply worried as Abi disappears with Alfie. Where has she gone, and what will happen next? Don’t miss this gripping episode filled with twists, heartbreak, and shocking revelations!</p>
+
+            <!-- Embedded YouTube video -->
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hM9AM01qcoU?si=KLgjUJrxLk6_-VW1" allowfullscreen></iframe>
+            </div>
+        `,
+        publishDate: "2025-02-07T23:55:00+13:00"
     }
 ];

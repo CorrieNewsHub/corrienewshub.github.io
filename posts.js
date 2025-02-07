@@ -31,17 +31,16 @@ const posts = [
         id: 2,
         title: "Coronation Street | Full Episode | Tuesday, 4th February 2025",
         author: "Admin",
-        image: "https://img.youtube.com/vi/hM9AM01qcoU/maxresdefault.jpg",
+        image: "https://img.youtube.com/vi/hM9AM01qcoU/sddefault.jpg",
         content: `
             <h3>Coronation Street | Full Episode | Tuesday, 4th February 2025</h3>
             <p>Tensions run high in tonight’s dramatic episode of Coronation Street! 💥</p>
             <p>As Max's lifeless body is carried out of the house and into an ambulance, a devastated David blames himself, regretting ever stealing Harvey’s money. Meanwhile, at the hospital, Nick accuses Leanne of starting the fire—she denies it, but shocking evidence emerges when she finds matches in her coat pocket. 🔥</p>
             <p>Elsewhere, Kevin is left deeply worried as Abi disappears with Alfie. Where has she gone, and what will happen next? Don’t miss this gripping episode filled with twists, heartbreak, and shocking revelations!</p>
 
-            <!-- Embedded YouTube video -->
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hM9AM01qcoU?si=KLgjUJrxLk6_-VW1" allowfullscreen></iframe>
-            </div>
+           <p>&nbsp;</p>
+<!-- Embedded YouTube video -->
+<div class="embed-responsive embed-responsive-16by9"><iframe src="//www.youtube.com/embed/hM9AM01qcoU?si=KLgjUJrxLk6_-VW1" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></div>
         `,
         publishDate: "2025-02-07T23:55:00+13:00"
     }

@@ -24,35 +24,7 @@ const posts = [
 
             <h3>Producer Kate Brooks on the New Characters</h3>
             <p>"Chaotic and loud, Mick and Lou bulldoze their way into Weatherfield, causing absolute carnage for the residents of Coronation Street. Their relationship is volatile to say the least, but at the heart of it lies a fierce sense of family loyalty."</p>
-            
-            <h4>Q&amp;A With Joe Layton</h4>
-            
-            <h4>Welcome to the Cobbles - how are you enjoying your time here?</h4>
-            <p>"I absolutely love it! Everyone's really welcoming. It really is everything I'd hoped it would be."</p>
-
-            <h4>How did you get the part?</h4>
-            <p>"I initially had to do a self-tape, and then I got called in for a screen test. Farrel and I hit it off immediately, and it just felt right."</p>
-
-            <h4>What makes a soap different from other acting experiences?</h4>
-            <p>"The pace is incredible. We shoot twelve scripts out of order with multiple directors. You have to trust your instincts and go for it."</p>
-
-            <h4>Describe Mick in three words.</h4>
-            <p>Impulsive, hot-headed, unpredictable.</p>
-
-            <h4>Q&amp;A With Farrel Hegarty</h4>
-
-            <h4>The news is finally out&mdash;how are you enjoying your time on Coronation Street?</h4>
-            <p>"It's been so much fun! We definitely came in hitting the ground running. It&rsquo;s so nice to come in as a duo&mdash;we're thick as thieves."</p>
-
-            <h4>How did you get the part?</h4>
-            <p>"I did a self-tape, then a screen test. The chemistry with Joe during the test was amazing&mdash;we even had a scene where I threw a spam sandwich at his face!"</p>
-
-            <h4>Describe Lou in three words.</h4>
-            <p>Irrational, gobby, fiery&mdash;but also loyal.</p>
-
-            <h4>What do you love about Coronation Street?</h4>
-            <p>"I&rsquo;ve been blown away by how warm and welcoming everyone is. The cast and crew are like a proper family. It&rsquo;s been an enjoyable experience."</p>
         `,
-        publishDate: "2025-02-07T22:57:00+13:00",
+        publishDate: "2025-02-07T22:57:00+13:00"
     }
 ];

@@ -16,3 +16,12 @@
     pointer-events: none;
     opacity: 0.5;
 }
+.post-image img {
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+

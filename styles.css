@@ -1,4 +1,4 @@
-.pagination {
+.pagination-container {
     margin-top: 20px;
 }
 
@@ -10,4 +10,9 @@
 
 .page-link {
     color: #007bff;
+}
+
+.page-item.disabled .page-link {
+    pointer-events: none;
+    opacity: 0.5;
 }

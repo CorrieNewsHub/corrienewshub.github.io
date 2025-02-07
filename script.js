@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const latestPostsList = document.getElementById("latest-posts-list");
     const allPostsList = document.getElementById("all-posts-list");
+    const paginationContainer = document.getElementById("pagination-container");
     const postsPerPage = 10;
     let currentPage = 1;
 
@@ -36,13 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function renderPagination(totalPages) {
-        // Remove old pagination if it exists
-        const oldPagination = document.querySelector(".pagination-container");
-        if (oldPagination) oldPagination.remove();
-
-        // Create new pagination
-        const paginationContainer = document.createElement("div");
-        paginationContainer.className = "pagination-container mt-4";
+        paginationContainer.innerHTML = "";
 
         const paginationNav = document.createElement("nav");
         paginationNav.className = "d-flex justify-content-center";
@@ -93,9 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         paginationNav.appendChild(paginationList);
         paginationContainer.appendChild(paginationNav);
-
-        // Append pagination after posts list
-        allPostsList.after(paginationContainer);
     }
 
     function updatePosts(totalPages) {

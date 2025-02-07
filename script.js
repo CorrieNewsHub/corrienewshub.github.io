@@ -36,11 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function renderPagination(totalPages) {
+        // Remove old pagination if it exists
+        const oldPagination = document.querySelector(".pagination-container");
+        if (oldPagination) oldPagination.remove();
+
+        // Create new pagination
+        const paginationContainer = document.createElement("div");
+        paginationContainer.className = "pagination-container mt-4";
+
         const paginationNav = document.createElement("nav");
-        paginationNav.className = "mt-4";
+        paginationNav.className = "d-flex justify-content-center";
 
         const paginationList = document.createElement("ul");
-        paginationList.className = "pagination justify-content-center";
+        paginationList.className = "pagination";
 
         // Previous button
         const prevItem = document.createElement("li");
@@ -84,7 +92,10 @@ document.addEventListener("DOMContentLoaded", () => {
         paginationList.appendChild(nextItem);
 
         paginationNav.appendChild(paginationList);
-        allPostsList.after(paginationNav);
+        paginationContainer.appendChild(paginationNav);
+
+        // Append pagination after posts list
+        allPostsList.after(paginationContainer);
     }
 
     function updatePosts(totalPages) {
@@ -92,8 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const endIndex = startIndex + postsPerPage;
         displayPosts(posts.slice(startIndex, endIndex), allPostsList);
 
-        // Re-render pagination to reflect the new current page
-        document.querySelector(".pagination").remove();
+        // Render pagination after updating posts
         renderPagination(totalPages);
     }
 

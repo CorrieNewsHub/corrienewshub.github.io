@@ -5,11 +5,55 @@ const posts = [
         author: "Admin",
         image: "https://images.ctfassets.net/ti0n6mm28of1/7KqoTeaFffok7Mu4a81JaN/3208690d894675bdb0d71caa0dddc8a2/EMBARGO_CORO_MICK_LOU.jpg",
         content: `
-            <h2>New Nightmare Neighbours Shake Up Coronation Street</h2>
-            <p>Weatherfield residents are in for a wild ride this February as 'nightmare neighbours' <strong>Mick and Lou Michaelis</strong> crash onto the scene, causing chaos from day one. Moving into Mawdsley Street, they’re set to ignite drama like never before by bringing trouble right to <strong>Chesney</strong> and <strong>Gemma’s</strong> doorstep.</p>
-            <p>The sparks begin on <strong>12th February</strong> with Lou (played by <strong>Farrel Hegarty</strong>) befriending Gemma. But the real shocker comes on <strong>14th February</strong> when Mick (played by <strong>Joe Layton</strong>) is revealed as the mystery man who’s been harassing Chesney for months.</p>
-            <p>Together, Mick and Lou’s arrival threatens to unravel hidden secrets and stir up long-standing tensions, ensuring life on the cobbles will never be the same again.</p>
-        `,
+               <h1>Nightmare Neighbours Shake Up Coronation Street</h1>
+    
+    <p>Residents of Weatherfield are in for a shock this February as Coronation Street welcomes the arrival of new ‘nightmare neighbours.’</p>
+    
+    <p>Mick and Lou Michaelis will storm into the street, causing trouble for anyone who dares to cross them.</p>
+    
+    <p>The Michaelis family will be moving into Mawdsley Street, behind Chesney and Gemma’s house, marking the first time Coronation Street has extended its drama beyond the ginnel.</p>
+    
+    <p>Lou (Farrel Hegarty) will arrive on her own on 12th February and quickly bond with Gemma (Dolly-Rose Campbell), recognizing each other from Bessie Street School where their children are classmates.</p>
+    
+    <p>When Mick (Joe Layton) appears on 14th February, viewers will discover he is the man with the silver van who has been harassing Chesney (Sam Aston) for months. Chesney remains unaware of Mick’s true identity.</p>
+    
+    <p>Mick and Lou soon form a friendship with the Winter-Browns, but their disruptive presence reveals old secrets, including a past link to Kit Green (Jacob Roberts).</p>
+
+    <h2>Cast and Crew Speak</h2>
+
+    <h3>Farrel Hegarty on Joining the Cast</h3>
+    <p>"I’m delighted and so grateful to be joining the cast of Coronation Street. Everyone has been incredibly warm and welcoming."</p>
+    <p>"Lou is a vibrant character—full of energy and chaos. She thrives on making waves but is deeply loyal to her family, especially Mick."</p>
+
+    <h3>Joe Layton on Playing Mick</h3>
+    <p>"Coronation Street is an institution, and walking down the cobbles as Mick is surreal. Farrel and I are having a blast bringing these characters to life."</p>
+    <p>"Mick is impulsive and unpredictable, and I enjoy exploring his layers beyond the typical ‘villain’ label."</p>
+
+    <h3>Producer Kate Brooks on the New Characters</h3>
+    <p>"Mick and Lou are loud, chaotic, and fiercely loyal. They’ll cause plenty of drama, and while they bring energy to the street, they won’t be everyone’s cup of tea."</p>
+
+    <h2>Q&A with Joe Layton</h2>
+
+    <h3>Welcome to Coronation Street! How’s it been?</h3>
+    <p>"I absolutely love it! Everyone has been really welcoming, and it’s even better than I imagined."</p>
+
+    <h3>What makes working on a soap different?</h3>
+    <p>"The pace is incredible. We shoot twelve scripts out of order with multiple directors. It forces you to trust your instincts and grow as an actor."</p>
+
+    <h3>What’s Mick like?</h3>
+    <p>"He’s hot-headed, impulsive, and unpredictable. Playing him is both challenging and rewarding."</p>
+
+    <h2>Q&A with Farrel Hegarty</h2>
+
+    <h3>What was your reaction to getting the part?</h3>
+    <p>"I was working as a studio manager when I found out. My colleagues gathered around, and it was such a supportive moment. I was in shock and tears of joy."</p>
+
+    <h3>How would you describe Lou?</h3>
+    <p>"She’s fiery, gobby, and irrational, but also fiercely loyal. I probably wouldn’t be friends with her in real life!"</p>
+
+    <h3>What do you love about working on Corrie?</h3>
+    <p>"The cast and crew are like a family. Everyone is so invested in each other’s success, and it’s been a wonderful experience so far."</p>
+,
         publishDate: "2025-02-07T22:28:00+13:00"
     },
     {

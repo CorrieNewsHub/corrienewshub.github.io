@@ -80,5 +80,104 @@ const posts = [
             <p>As the fire’s aftermath unfolds, fans will be left guessing who the real culprit is and whether the Platt family can recover from this tragic event. Tune in for all the twists, betrayals, and shocking revelations!</p>
         `,
         publishDate: "2025-02-08T00:19:00+13:00"
-    }
+    },
+    {
+    id: 4,
+    title: "14 Major Coronation Street Spoilers Coming Next Week",
+    author: "Admin",
+    image: "https://i.postimg.cc/ZKD8h8PL/image.png",
+    content: `
+        <div style="text-align: center;">
+            <h3>14 Major Coronation Street Spoilers for Next Week</h3>
+            <p>Get ready for another action-packed week on Coronation Street! Drama and mystery continue to unfold, with new twists in the Platt house fire investigation, major life decisions, and surprising arrivals on the cobbles.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>1. Shona watches the arsonist footage</h4>
+            <img src="https://i.postimg.cc/ZKD8h8PL/image.png" alt="Shona watches footage" class="img-fluid">
+            <p>Kevin shares CCTV footage of the arsonist sneaking around the garage. Shona is shaken as she realizes something significant. What did she see?</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>2. David is defended by Adam</h4>
+            <img src="https://i.postimg.cc/Nj3RKQz9/image.png" alt="Adam defending David" class="img-fluid">
+            <p>Adam pressures Kit to release David from police custody, pointing out the lack of evidence. Nick also apologizes for suspecting David.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>3. Leanne faces a tough interrogation</h4>
+            <img src="https://i.postimg.cc/LXTPQL6L/image.png" alt="Leanne in police interview" class="img-fluid">
+            <p>Leanne is called in for questioning. Despite mounting evidence against her, she maintains her innocence.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>4. Kit receives crucial forensic evidence</h4>
+            <img src="https://i.postimg.cc/MG0fXVBN/image.png" alt="Forensic report scene" class="img-fluid">
+            <p>Kit is shocked by a new forensic report. Leanne is still under suspicion, but the case takes an unexpected turn.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>5. David faces temptation</h4>
+            <img src="https://i.postimg.cc/wTS1V0cn/image.png" alt="David tempted by offer" class="img-fluid">
+            <p>David is offered £2,000 for his role in a recent robbery. Andy tries to lure him into a bigger job, while Nick proposes an alternative.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>6. Rob’s secret plan is exposed</h4>
+            <img src="https://i.postimg.cc/vmycRTKz/image.png" alt="Rob and Mandy" class="img-fluid">
+            <p>Rob and prison guard Mandy share a kiss and plan his escape. However, their scheme doesn’t go as expected.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>7. Carla’s operation faces delays</h4>
+            <img src="https://i.postimg.cc/qRbRCLvb/image.png" alt="Carla in hospital" class="img-fluid">
+            <p>Carla’s operation day is postponed, raising fears that Rob might not go through with his transplant commitment.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>8. Mason’s funeral</h4>
+            <img src="https://i.postimg.cc/28B6VnRG/image.png" alt="Mason's funeral" class="img-fluid">
+            <p>Tim, Yasmeen, Dylan, and others attend Mason's funeral. Abi struggles with the emotional weight of the occasion.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>9. Kevin gets medical news</h4>
+            <img src="https://i.postimg.cc/9QdQBVfq/image.png" alt="Kevin receives test results" class="img-fluid">
+            <p>Kevin learns he needs an operation. He later decides it’s time to share the news with Jack.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>10. Abi seeks help</h4>
+            <img src="https://i.postimg.cc/YStqnV4D/image.png" alt="Abi at the doctor" class="img-fluid">
+            <p>Abi visits Dr. Gaddas to discuss her hallucinations. Debbie later finds her in a troubling state, triggering more concern.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>11. Daniel makes a plea to Bethany</h4>
+            <img src="https://i.postimg.cc/G25LpmX6/image.png" alt="Daniel tries to stop Bethany" class="img-fluid">
+            <p>Daniel tries to convince Bethany to stay in Weatherfield. Will she change her mind?</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>12. Lou and Mick arrive in Weatherfield</h4>
+            <img src="https://i.postimg.cc/qq6k6HYq/image.png" alt="Lou makes her entrance" class="img-fluid">
+            <p>Newcomers Lou and Mick Michaelis move into Mawdsley Street. Mick’s secret identity as Chesney’s tormentor is revealed.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>13. Dev prepares to leave</h4>
+            <img src="https://i.postimg.cc/9z3cGN5p/image.png" alt="Dev shares his plans" class="img-fluid">
+            <p>Dev announces his plans to leave for India to care for his aunt. He puts Aadi in charge of his businesses while he's away.</p>
+        </div>
+
+        <div style="text-align: center;">
+            <h4>14. Cassie opens up to Leanne</h4>
+            <img src="https://i.postimg.cc/RCWfL6x6/image.png" alt="Cassie confides in Leanne" class="img-fluid">
+            <p>On Valentine's Day, Cassie confides in Leanne about her feelings for Steve. Leanne later reflects on her own loneliness at The Rovers.</p>
+        </div>
+    `,
+    publishDate: "2025-02-08T09:23:00+13:00"
+}
+
 ];
+    

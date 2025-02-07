@@ -3,25 +3,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const postId = parseInt(params.get("id"));
 
-    // Find the post by ID
-    const post = posts.find(p => p.id === postId);
-
-    if (post) {
-        const formattedDate = new Date(post.publishDate).toLocaleDateString("en-NZ", {
+    function formatDateTime(dateString) {
+        const date = new Date(dateString);
+        const formattedDate = date.toLocaleDateString("en-NZ", {
             month: "long",
             day: "numeric",
             year: "numeric"
         });
+        const formattedTime = date.toLocaleTimeString("en-NZ", {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: true
+        });
+        return `${formattedDate} at ${formattedTime}`;
+    }
 
-        // Display the post content
+    // Find the post by ID
+    const post = posts.find(p => p.id === postId);
+
+    if (post) {
+        // Display the post content with date and time
         postContent.innerHTML = `
             <h1>${post.title}</h1>
-            <p><small>Published on ${formattedDate} by ${post.author}</small></p>
+            <p><small>Published on ${formatDateTime(post.publishDate)} by ${post.author}</small></p>
             <img src="${post.image}" class="img-fluid mb-4" alt="${post.title}">
             <div>${post.content}</div>
         `;
 
-        // Update meta tags for SEO and social media previews
+        // Dynamically update meta tags for social previews
         document.title = post.title;
         document.getElementById("post-title").innerText = post.title;
         document.getElementById("post-description").content = post.content.substring(0, 150);

@@ -1,8 +1,6 @@
-/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,30 +8,14 @@ body {
     min-height: 100vh;
 }
 
-/* Navbar */
-.navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
+.container {
+    flex: 1;
 }
 
-/* Header */
-.themed-header {
-    background-image: url('https://via.placeholder.com/1920x400');
-    background-size: cover;
-    background-position: center;
-}
-
-/* Cards */
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* Footer */
 .footer {
     margin-top: auto;
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
 }

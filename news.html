@@ -23,7 +23,101 @@
     <div id="footer-placeholder"></div>
 
     <script src="posts.js"></script>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const postsPerPage = 6;
+            let currentPage = 1;
+
+            // Sort posts by date (newest first)
+            const sortedPosts = posts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+
+            // Render paginated posts
+            function renderPosts(page) {
+                currentPage = page;
+                const start = (page - 1) * postsPerPage;
+                const end = start + postsPerPage;
+
+                const postsContainer = document.getElementById("all-posts-list");
+                postsContainer.innerHTML = "";
+
+                sortedPosts.slice(start, end).forEach(post => {
+                    const postElement = document.createElement("div");
+                    postElement.className = "col-md-6 col-lg-4 mb-4";
+
+                    postElement.innerHTML = `
+                        <div class="card h-100 shadow-sm">
+                            <img src="${post.image}" class="card-img-top" alt="${post.title}">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="post.html?id=${post.id}" class="stretched-link">${post.title}</a></h5>
+                                <p class="card-text"><small>Published on ${new Date(post.publishDate).toLocaleString("en-NZ", {
+                                    dateStyle: "long",
+                                    timeStyle: "short"
+                                })}</small></p>
+                                <p class="card-text">${post.content.replace(/<\/?[^>]+(>|$)/g, "").substring(0, 150)}...</p>
+                            </div>
+                        </div>
+                    `;
+
+                    postsContainer.appendChild(postElement);
+                });
+
+                renderPagination();
+            }
+
+            // Render pagination controls
+            function renderPagination() {
+                const totalPages = Math.ceil(sortedPosts.length / postsPerPage);
+                const paginationContainer = document.getElementById("pagination-container");
+                paginationContainer.innerHTML = "";
+
+                if (totalPages > 1) {
+                    const paginationNav = document.createElement("nav");
+                    paginationNav.setAttribute("aria-label", "Page navigation");
+                    const paginationList = document.createElement("ul");
+                    paginationList.className = "pagination justify-content-center";
+
+                    // Previous button
+                    const prevItem = document.createElement("li");
+                    prevItem.className = `page-item ${currentPage === 1 ? "disabled" : ""}`;
+                    prevItem.innerHTML = `<a class="page-link" href="#" aria-label="Previous">&laquo;</a>`;
+                    prevItem.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        if (currentPage > 1) renderPosts(currentPage - 1);
+                    });
+                    paginationList.appendChild(prevItem);
+
+                    // Page numbers
+                    for (let i = 1; i <= totalPages; i++) {
+                        const pageItem = document.createElement("li");
+                        pageItem.className = `page-item ${i === currentPage ? "active" : ""}`;
+                        pageItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+                        pageItem.addEventListener("click", (e) => {
+                            e.preventDefault();
+                            renderPosts(i);
+                        });
+                        paginationList.appendChild(pageItem);
+                    }
+
+                    // Next button
+                    const nextItem = document.createElement("li");
+                    nextItem.className = `page-item ${currentPage === totalPages ? "disabled" : ""}`;
+                    nextItem.innerHTML = `<a class="page-link" href="#" aria-label="Next">&raquo;</a>`;
+                    nextItem.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        if (currentPage < totalPages) renderPosts(currentPage + 1);
+                    });
+                    paginationList.appendChild(nextItem);
+
+                    paginationNav.appendChild(paginationList);
+                    paginationContainer.appendChild(paginationNav);
+                }
+            }
+
+            // Initial render
+            renderPosts(1);
+        });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="loadComponents.js"></script>
 </body>

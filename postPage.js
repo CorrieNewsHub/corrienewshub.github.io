@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const sortedPosts = posts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+    
+    // Example: Render the latest post to the page (modify according to your needs)
     const params = new URLSearchParams(window.location.search);
     const postId = parseInt(params.get("id"));
-    const post = posts.find(p => p.id === postId);
+    const post = sortedPosts.find(p => p.id === postId);
 
     if (post) {
-        // Update post title, date, and content
         document.getElementById("post-title-header").innerText = post.title;
         document.getElementById("post-date").innerText = new Date(post.publishDate).toLocaleString("en-NZ", {
             dateStyle: "long",

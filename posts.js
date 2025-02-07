@@ -85,7 +85,7 @@ const posts = [
     id: 4,
     title: "14 Major Coronation Street Spoilers Coming Next Week",
     author: "Admin",
-    image: "https://i.postimg.cc/ZKD8h8PL/image.png",
+    image: "https://i.postimg.cc/9QdQBVfq/image.png",
     content: `
         <div style="text-align: center;">
             <h3>14 Major Coronation Street Spoilers for Next Week</h3>

@@ -5,13 +5,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const postsPerPage = 10;
     let currentPage = 1;
 
-    function formatDate(dateString) {
+    function formatDateTime(dateString) {
         const date = new Date(dateString);
-        return date.toLocaleDateString("en-NZ", {
+        const formattedDate = date.toLocaleDateString("en-NZ", {
             month: "long",
             day: "numeric",
             year: "numeric"
         });
+        const formattedTime = date.toLocaleTimeString("en-NZ", {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: true
+        });
+        return `${formattedDate} at ${formattedTime}`;
     }
 
     function displayPosts(postsToShow, container) {
@@ -26,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="card-body">
                         <h5 class="card-title">${post.title}</h5>
                         <p class="card-text">${post.content.substring(0, 100)}...</p>
-                        <p><small>Published on ${formatDate(post.publishDate)}</small></p>
+                        <p><small>Published on ${formatDateTime(post.publishDate)}</small></p>
                         <a href="post.html?id=${post.id}" class="btn btn-primary">Read More</a>
                     </div>
                 </div>

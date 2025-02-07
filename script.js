@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const latestPostsList = document.getElementById("latest-posts-list");
     const allPostsList = document.getElementById("all-posts-list");
     const postsPerPage = 10;
+    let currentPage = 1;
 
     function formatDate(dateString) {
         const date = new Date(dateString);
@@ -34,48 +35,76 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Show 4 latest posts on the homepage
+    function renderPagination(totalPages) {
+        const paginationNav = document.createElement("nav");
+        paginationNav.className = "mt-4";
+
+        const paginationList = document.createElement("ul");
+        paginationList.className = "pagination justify-content-center";
+
+        // Previous button
+        const prevItem = document.createElement("li");
+        prevItem.className = `page-item ${currentPage === 1 ? "disabled" : ""}`;
+        prevItem.innerHTML = `<a class="page-link" href="#">Previous</a>`;
+        prevItem.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                updatePosts(totalPages);
+            }
+        });
+        paginationList.appendChild(prevItem);
+
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+            const pageItem = document.createElement("li");
+            pageItem.className = `page-item ${i === currentPage ? "active" : ""}`;
+            pageItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+
+            pageItem.addEventListener("click", (e) => {
+                e.preventDefault();
+                currentPage = i;
+                updatePosts(totalPages);
+            });
+
+            paginationList.appendChild(pageItem);
+        }
+
+        // Next button
+        const nextItem = document.createElement("li");
+        nextItem.className = `page-item ${currentPage === totalPages ? "disabled" : ""}`;
+        nextItem.innerHTML = `<a class="page-link" href="#">Next</a>`;
+        nextItem.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePosts(totalPages);
+            }
+        });
+        paginationList.appendChild(nextItem);
+
+        paginationNav.appendChild(paginationList);
+        allPostsList.after(paginationNav);
+    }
+
+    function updatePosts(totalPages) {
+        const startIndex = (currentPage - 1) * postsPerPage;
+        const endIndex = startIndex + postsPerPage;
+        displayPosts(posts.slice(startIndex, endIndex), allPostsList);
+
+        // Re-render pagination to reflect the new current page
+        document.querySelector(".pagination").remove();
+        renderPagination(totalPages);
+    }
+
+    // Show latest 4 posts on the homepage
     if (latestPostsList) {
         displayPosts(posts.slice(0, 4), latestPostsList);
     }
 
-    // Pagination for the news page
+    // Setup pagination on the news page
     if (allPostsList) {
-        let currentPage = 1;
-
-        function renderPagination() {
-            const totalPages = Math.ceil(posts.length / postsPerPage);
-            const paginationNav = document.createElement("nav");
-            paginationNav.className = "mt-4";
-
-            const paginationList = document.createElement("ul");
-            paginationList.className = "pagination justify-content-center";
-
-            for (let i = 1; i <= totalPages; i++) {
-                const pageItem = document.createElement("li");
-                pageItem.className = "page-item" + (i === currentPage ? " active" : "");
-                pageItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
-
-                pageItem.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    currentPage = i;
-                    updatePosts();
-                });
-
-                paginationList.appendChild(pageItem);
-            }
-
-            paginationNav.appendChild(paginationList);
-            allPostsList.after(paginationNav);
-        }
-
-        function updatePosts() {
-            const startIndex = (currentPage - 1) * postsPerPage;
-            const endIndex = startIndex + postsPerPage;
-            displayPosts(posts.slice(startIndex, endIndex), allPostsList);
-        }
-
-        updatePosts();
-        renderPagination();
+        const totalPages = Math.ceil(posts.length / postsPerPage);
+        updatePosts(totalPages);
     }
 });

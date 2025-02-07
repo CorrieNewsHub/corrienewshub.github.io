@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 year: "numeric"
             });
 
+            // Display the post content
             postContent.innerHTML = `
                 <h1>${post.title}</h1>
                 <p><small>Published on ${formattedDate} by ${post.author}</small></p>
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div>${post.content}</div>
             `;
 
+            // Update SEO meta tags dynamically
             document.getElementById("post-title").innerText = post.title;
             document.getElementById("post-description").content = post.content.substring(0, 150);
             document.getElementById("og-title").content = post.title;

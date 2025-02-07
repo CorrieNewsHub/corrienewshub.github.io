@@ -1,19 +1,19 @@
 const posts = [
     {
-        id: 1,
-        title: "Recent Drama on Coronation Street!",
-        author: "Admin",
-        image: "https://www.thesun.co.uk/wp-content/uploads/2025/02/mhp18p-coronation-street-itv-soap-945916226.jpg",
-        content: "Here's the full post content about recent drama on Coronation Street...",
-        publishDate: "2025-02-01T10:00:00+13:00"
-    },
-    {
         id: 2,
-        title: "Upcoming Episode Spoilers",
+        title: "Nightmare Neighbours Arrive on Coronation Street",
         author: "Admin",
-        image: "https://www.thesun.co.uk/wp-content/uploads/2025/02/mhp18p-coronation-street-itv-soap-945916226.jpg",
-        content: "Spoilers ahead! An intense showdown between key characters is expected...",
-        publishDate: "2025-02-02T14:00:00+13:00"
+        image: "https://images.ctfassets.net/ti0n6mm28of1/7KqoTeaFffok7Mu4a81JaN/3208690d894675bdb0d71caa0dddc8a2/EMBARGO_CORO_MICK_LOU.jpg",
+        content: `
+            ### New Nightmare Neighbours Shake Up Coronation Street
+            
+            Weatherfield residents are in for a wild ride this February as 'nightmare neighbours' **Mick and Lou Michaelis** crash onto the scene, causing chaos from day one. Moving into Mawdsley Street, they’re set to ignite drama like never before by bringing trouble right to **Chesney** and **Gemma’s** doorstep.
+            
+            The sparks begin on **12th February** with Lou (played by **Farrel Hegarty**) befriending Gemma. But the real shocker comes on **14th February** when Mick (played by **Joe Layton**) is revealed as the mystery man who’s been harassing Chesney for months.
+            
+            Together, Mick and Lou’s arrival threatens to unravel hidden secrets and stir up long-standing tensions, ensuring life on the cobbles will never be the same again.
+        `,
+        publishDate: "2025-02-07T22:25:00+13:00"
     },
     {
         id: 3,

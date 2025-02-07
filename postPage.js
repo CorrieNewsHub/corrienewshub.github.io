@@ -35,11 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("post-title").innerText = post.title;
         document.getElementById("post-description").content = post.content.substring(0, 150);
 
+        // Update Open Graph meta tags
         document.querySelector('meta[property="og:title"]').content = post.title;
         document.querySelector('meta[property="og:description"]').content = post.content.substring(0, 150);
         document.querySelector('meta[property="og:image"]').content = post.image;
         document.querySelector('meta[property="og:url"]').content = window.location.href;
 
+        // Update Twitter meta tags
         document.querySelector('meta[name="twitter:title"]').content = post.title;
         document.querySelector('meta[name="twitter:description"]').content = post.content.substring(0, 150);
         document.querySelector('meta[name="twitter:image"]').content = post.image;
